@@ -1,0 +1,55 @@
+.margin {
+  margin: 25px;
+}
+
+.semi-donut {
+  width: 300px;
+  height: 150px;
+  position: relative;
+  color: #1E2635;
+  font-size: 22px;
+  font-weight: 600;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.semi-donut::after {
+  content: "";
+  width: 300px;
+  height: 300px;
+  border: 50px solid;
+  border-color: rgba(140, 133, 133, 0.284) rgba(140, 133, 133, 0.284) var(--fill) var(--fill);
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  transform: rotate(-45deg);
+  transition: transform 1s ease-in;
+}
+
+.semi-donut.visible::after {
+  transform: rotate(calc(var(--percentage)*1.8deg - 45deg));
+}
+
+.margin {
+  color: #1E2635;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 75px;
+}
+
+.space {
+  padding-right: 80px;
+}
+
+.graphs {
+  margin: 0px 30px;
+}

@@ -1,0 +1,68 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    color: #151925;
+    transition: top 0.3s;
+    background-color: #fff;
+    border-bottom: 1px solid gray;
+}
+
+.title {
+    color: #151925;
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+
+.nav__link {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    background-color: transparent;
+    border-color: transparent;
+    width: 120px;
+    height: 30px;
+    color: #151925;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.nav__link {
+    position: relative;
+    border: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+.nav__link:focus,
+.nav__link:hover {
+    color: #000;
+}
+
+.nav__link:focus:after,
+.nav__link:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+.nav__link:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #000;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
